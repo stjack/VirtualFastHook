@@ -4,7 +4,10 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.os.IBinder;
 import android.os.IInterface;
+import android.os.RemoteException;
+import android.os.ResultReceiver;
 
+import java.io.FileDescriptor;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -26,6 +29,8 @@ public class ProxyServiceFactory {
 			@Override
 			public IBinder getService(final Context context, ClassLoader classLoader, IBinder binder) {
 				return new StubBinder(classLoader, binder) {
+
+
 					@Override
 					public InvocationHandler createHandler(Class<?> interfaceClass, final IInterface base) {
 						return new InvocationHandler() {
@@ -50,6 +55,8 @@ public class ProxyServiceFactory {
 			@Override
 			public IBinder getService(final Context context, ClassLoader classLoader, IBinder binder) {
 				return new StubBinder(classLoader, binder) {
+
+
 					@Override
 					public InvocationHandler createHandler(Class<?> interfaceClass, final IInterface base) {
 						return new InvocationHandler() {
@@ -74,6 +81,7 @@ public class ProxyServiceFactory {
 			@Override
 			public IBinder getService(final Context context, ClassLoader classLoader, IBinder binder) {
 				return new StubBinder(classLoader, binder) {
+
 
 					@Override
 					public InvocationHandler createHandler(Class<?> interfaceClass, final IInterface base) {

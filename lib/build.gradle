@@ -1,10 +1,10 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -27,7 +27,9 @@ android {
     }
     lintOptions {
         //IJobService need NewApi
-        warning 'NewApi','OnClick'
+        warning 'NewApi', 'OnClick'
+    }
+    productFlavors {
     }
 }
 

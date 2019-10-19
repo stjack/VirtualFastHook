@@ -11,7 +11,7 @@ import mirror.android.os.ServiceManager;
  *
  * @see MethodInvocationProxy
  */
-public abstract class BinderInvocationProxy extends MethodInvocationProxy<BinderInvocationStub> {
+public  class BinderInvocationProxy extends MethodInvocationProxy<BinderInvocationStub> {
 
 	protected String mServiceName;
 

@@ -16,6 +16,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.widget.Button;
 
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.ObjectAnimator;
@@ -24,7 +25,7 @@ import com.nineoldandroids.view.ViewHelper;
 import io.virtualfasthook.R;
 
 @SuppressLint("ClickableViewAccessibility")
-public class RippleButton extends AppCompatButton {
+public class RippleButton extends AppCompatButton {//
 
     private float mDownX;
     private float mDownY;
@@ -228,7 +229,8 @@ public class RippleButton extends AppCompatButton {
             return;
         }
 
-        canvas.save(Canvas.CLIP_SAVE_FLAG);
+        //canvas.save(Canvas.CLIP_SAVE_FLAG);
+        canvas.save();
 
         mPath.reset();
         mPath.addCircle(mDownX, mDownY, mRadius, Path.Direction.CW);

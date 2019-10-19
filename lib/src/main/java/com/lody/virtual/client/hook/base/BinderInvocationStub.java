@@ -7,6 +7,7 @@ import android.os.IBinder;
 import android.os.IInterface;
 import android.os.Parcel;
 import android.os.RemoteException;
+
 import android.util.Log;
 
 import com.lody.virtual.client.core.VirtualCore;
@@ -21,7 +22,7 @@ import mirror.android.os.ServiceManager;
  * @author Lody
  */
 @SuppressWarnings("unchecked")
-public class BinderInvocationStub extends MethodInvocationStub<IInterface> implements IBinder {
+ public class BinderInvocationStub extends MethodInvocationStub<IInterface> implements IBinder {
 
     private static final String TAG = BinderInvocationStub.class.getSimpleName();
     private IBinder mBaseBinder;
@@ -104,6 +105,8 @@ public class BinderInvocationStub extends MethodInvocationStub<IInterface> imple
     public IInterface queryLocalInterface(String descriptor) {
         return getProxyInterface();
     }
+
+
 
     @Override
     public void dump(FileDescriptor fd, String[] args) throws RemoteException {

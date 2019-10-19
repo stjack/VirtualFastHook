@@ -92,7 +92,8 @@ class FitTextHelper {
     public static boolean isSingleLine(TextView textView) {
         if (textView == null) return false;
         if (textView instanceof BaseTextView) {
-            return ((BaseTextView) textView).isSingleLine();
+            BaseTextView view=(BaseTextView)textView;
+            return  view.isSingleLine();
         }
         if (textView == null) {
             return false;
